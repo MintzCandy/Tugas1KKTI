@@ -66,7 +66,7 @@ def brute_force_caesar(ciphertext):
 
 def solve_caesar():
     print("=" * 70)
-    print("BAGIAN 1 - CAESAR CIPHER")
+    print("CAESAR CIPHER")
     print("=" * 70)
     print("Ciphertext:", CAESAR_CIPHERTEXT)
     print()
@@ -262,10 +262,10 @@ class Enigma:
                 x, self.rotor_order[i], self.position[i], self.ring[i]
             )
 
-        # reflector
+        
         x = ALPHABET.index(REFLECTOR_B[x])
 
-        # rotor kiri -> tengah -> kanan
+       
         for i in (0, 1, 2):
             x = self._rotor_backward(
                 x, self.rotor_order[i], self.position[i], self.ring[i]
@@ -282,11 +282,10 @@ class Enigma:
 def solve_enigma():
     print()
     print("=" * 70)
-    print("BAGIAN 3 - ENIGMA MACHINE")
+    print("ENIGMA MACHINE")
     print("=" * 70)
 
-    # Konfigurasi soal ditulis kanan ke kiri -> disusun ulang jadi
-    # urutan [kiri, tengah, kanan] agar konsisten dengan pemasangan fisik.
+  
     rotor_order = ["II", "III", "I"]        # kiri, tengah, kanan
     ring_settings = ["H", "R", "E"]         # kiri, tengah, kanan
     positions = ["R", "F", "J"]             # kiri, tengah, kanan
